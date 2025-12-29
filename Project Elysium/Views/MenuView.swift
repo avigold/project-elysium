@@ -1,8 +1,14 @@
-//
-//  MenuView.swift
-//  Project Elysium
-//
-//  Created by Avram Score on 28/12/2025.
-//
+import SwiftUI
 
-import Foundation
+struct MenuView: View {
+    var body: some View {
+        VStack(spacing: 16) {
+            Text("Project Elysium").font(.largeTitle)
+
+            NavigationLink("Stack Building") { DeckBuilderView() }
+            NavigationLink("Battlefield") { BattlefieldView() }
+        }
+        .padding(24)
+        .frame(minWidth: 520, minHeight: 360)
+    }
+}

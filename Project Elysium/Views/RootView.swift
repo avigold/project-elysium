@@ -1,8 +1,9 @@
-//
-//  RootView.swift
-//  Project Elysium
-//
-//  Created by Avram Score on 28/12/2025.
-//
+import SwiftUI
 
-import Foundation
+struct RootView: View {
+    var body: some View {
+        NavigationStack {
+            MenuView()
+        }
+    }
+}

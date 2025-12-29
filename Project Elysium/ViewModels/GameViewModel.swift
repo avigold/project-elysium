@@ -26,7 +26,7 @@ final class GameViewModel: ObservableObject {
     // MARK: - Core actions
 
     func addGoalToStack(title: String, details: String, cost: EnergyCost, art: String?) {
-        let goal: GoalCard = GoalCard(title: title, details: details, cost: cost, artAssetName: art, zone: .stack)
+        let goal: GoalCard = GoalCard(title: title, details: details, energyCost: cost.amounts, artKey: art ?? "laurel", zone: .stack)
         state.goals.append(goal)
         persist()
     }
@@ -65,7 +65,9 @@ final class GameViewModel: ObservableObject {
         guard let goal: GoalCard = state.goals.first(where: { $0.id == goalId }),
               goal.zone == .hand else { return false }
 
-        let plan: [(EnergyType, Int)] = EnergyType.allCases.map { ($0, goal.cost.requires($0)) }
+        let plan: [(EnergyType, Int)] = EnergyType.allCases.map { type in
+            (type, max(0, goal.energyCost[type] ?? 0))
+        }
         var energiesToTap: [UUID] = []
 
         for (type, needed) in plan {
@@ -99,10 +101,8 @@ final class GameViewModel: ObservableObject {
 
     func completeGoal(_ goalId: UUID) {
         guard let gIdx: Int = state.goals.firstIndex(where: { $0.id == goalId }) else { return }
-
-        state.goals[gIdx].completedAt = Date()
-        moveGoal(goalId, to: .elysium)
-
+        let goal = state.goals[gIdx]
+        
         // release energies bound to this goal
         for eIdx in state.energies.indices {
             if state.energies[eIdx].boundGoalId == goalId {

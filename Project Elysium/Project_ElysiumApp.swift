@@ -1,17 +1,13 @@
-//
-//  Project_ElysiumApp.swift
-//  Project Elysium
-//
-//  Created by Avram Score on 28/12/2025.
-//
-
 import SwiftUI
 
 @main
-struct Project_ElysiumApp: App {
+struct ProjectElysiumApp: App {
+    @StateObject private var vm: GameViewModel = GameViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(vm)
         }
     }
 }
