@@ -5,21 +5,32 @@ struct ArtBadgeView: View {
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 6, style: .continuous)
+            let shape = RoundedRectangle(cornerRadius: 6, style: .continuous)
+
+            shape
                 .fill(backgroundFill)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 6, style: .continuous)
-                        .strokeBorder(.primary.opacity(0.15), lineWidth: 1)
+                    shape.strokeBorder(.primary.opacity(0.15), lineWidth: 1)
                 )
 
-            VStack(spacing: 4) {
-                Image(systemName: symbolName)
-                    .font(.system(size: 18, weight: .semibold))
-                Text(shortLabel)
-                    .font(.caption2)
-                    .fontWeight(.semibold)
+            // If an asset with this name exists, show it. Otherwise show the old badge.
+            if NSImage(named: artKey) != nil {
+                Image(artKey)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 44, height: 44)
+                    .clipped()
+                    .mask(shape)
+            } else {
+                VStack(spacing: 4) {
+                    Image(systemName: symbolName)
+                        .font(.system(size: 18, weight: .semibold))
+                    Text(shortLabel)
+                        .font(.caption2)
+                        .fontWeight(.semibold)
+                }
+                .foregroundStyle(.primary.opacity(0.85))
             }
-            .foregroundStyle(.primary.opacity(0.85))
         }
         .frame(width: 44, height: 44)
         .accessibilityLabel(Text("Card art \(artKey)"))
