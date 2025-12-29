@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "soma.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

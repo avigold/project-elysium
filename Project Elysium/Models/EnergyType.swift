@@ -27,4 +27,14 @@ enum EnergyType: String, CaseIterable, Identifiable, Codable {
         case .schole: return "Χ"
         }
     }
+    
+    var inlineMeaning: String {
+        switch self {
+        case .soma:   return "Body, stamina, physical effort"
+        case .nous:   return "Focus, reasoning, deep work"
+        case .eros:   return "Social/emotional energy, desire"
+        case .thumos: return "Drive, courage, confrontation"
+        case .schole: return "Time/space for reflection, planning"
+        }
+    }
 }
