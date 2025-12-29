@@ -148,7 +148,6 @@
 				6333A6DF2F017E3700D6F4D2 /* DragDrop */,
 				6333A6DE2F017E2D00D6F4D2 /* ViewModels */,
 				6333A6DD2F017DF300D6F4D2 /* Persistence */,
-				6333A6BB2F00D5FC00D6F4D2 /* Assets */,
 				6333A6BA2F00D5EF00D6F4D2 /* Stores */,
 				6333A6B92F00D5E600D6F4D2 /* Utils */,
 				6333A6B82F00D5DE00D6F4D2 /* Models */,
@@ -235,13 +234,6 @@
 				6333A6C92F00D96F00D6F4D2 /* GameStore.swift */,
 			);
 			path = Stores;
-			sourceTree = "<group>";
-		};
-		6333A6BB2F00D5FC00D6F4D2 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		6333A6DD2F017DF300D6F4D2 /* Persistence */ = {
