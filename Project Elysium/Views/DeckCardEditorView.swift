@@ -19,7 +19,7 @@ struct DeckCardEditorView: View {
             VStack(alignment: .leading, spacing: 14) {
                 topLine
 
-                GroupBox("Card") {
+                ElysiumSection(title: "Card") {
                     VStack(alignment: .leading, spacing: 10) {
                         TextField("Title", text: $card.title)
                             .textFieldStyle(.roundedBorder)
@@ -29,8 +29,9 @@ struct DeckCardEditorView: View {
                     }
                     .padding(8)
                 }
+                .groupBoxStyle(.automatic)
 
-                GroupBox("Casting Cost") {
+                ElysiumSection(title: "Casting Cost") {
                     VStack(alignment: .leading, spacing: 10) {
                         HStack {
                             Text("Cost:")
@@ -41,32 +42,25 @@ struct DeckCardEditorView: View {
                         }
 
                         ForEach(EnergyType.allCases) { t in
-                            HStack {
-                                Text("\(t.glyph)  \(t.displayName)")
-                                    .frame(width: 160, alignment: .leading)
-                                Stepper(
-                                    value: Binding(
-                                        get: { card.energyCost[t] ?? 0 },
-                                        set: { v in
-                                            card.energyCost[t] = max(0, v)
-                                            onChange()
-                                        }
-                                    ),
-                                    in: 0...9
-                                ) {
-                                    Text("\(card.energyCost[t] ?? 0)")
-                                        .frame(width: 24, alignment: .trailing)
-                                }
-                                .onChange(of: card.energyCost[t] ?? 0) { _ in onChange() }
-
-                                Spacer()
-                            }
+                            EnergyPillStepper(
+                                glyph: t.glyph,
+                                label: t.displayName,
+                                value: Binding(
+                                    get: { card.energyCost[t] ?? 0 },
+                                    set: { v in
+                                        card.energyCost[t] = max(0, v)
+                                    }
+                                ),
+                                range: 0...9,
+                                onChange: onChange
+                            )
                         }
                     }
                     .padding(8)
                 }
+                .groupBoxStyle(.automatic)
 
-                GroupBox("Acceptance Criteria") {
+                ElysiumSection(title: "Acceptance Criteria") {
                     VStack(alignment: .leading, spacing: 8) {
                         ForEach(Array(card.acceptanceCriteria.enumerated()), id: \.offset) { idx, item in
                             HStack {
@@ -111,8 +105,9 @@ struct DeckCardEditorView: View {
                     }
                     .padding(8)
                 }
+                .groupBoxStyle(.automatic)
 
-                GroupBox("Art") {
+                ElysiumSection(title: "Art") {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 140), spacing: 10)], spacing: 10) {
                         ForEach(artOptions, id: \.key) { opt in
                             Button {
@@ -129,8 +124,7 @@ struct DeckCardEditorView: View {
                                     }
                                 }
                                 .padding(10)
-                                .background(.thinMaterial)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .elysiumSurface(cornerRadius: 12, strokeOpacity: 0.14)
                             }
                             .buttonStyle(.plain)
                         }
@@ -140,7 +134,9 @@ struct DeckCardEditorView: View {
 
                 Spacer(minLength: 8)
             }
+            .groupBoxStyle(.automatic)
         }
+        .foregroundStyle(Color.elysiumInk.opacity(0.92))
         .onChange(of: card.title) { _ in onChange() }
         .onChange(of: card.details) { _ in onChange() }
         .navigationTitle(card.title.isEmpty ? "Goal" : card.title)
@@ -151,7 +147,18 @@ struct DeckCardEditorView: View {
             Text("Stack card editor")
                 .font(.title2)
                 .fontWeight(.semibold)
+                .foregroundColor(Color.white)
             Spacer()
+        }
+    }
+    
+    private func energyHint(for t: EnergyType) -> String {
+        switch t {
+        case .soma:   return "Body: strength, stamina, physical execution."
+        case .nous:   return "Mind: focus, thinking, deep work."
+        case .eros:   return "Connection: emotional bandwidth, relationships, desire."
+        case .thumos: return "Drive: resolve, courage, confrontation, will."
+        case .schole: return "Leisure: time, space, recovery, unhurried attention."
         }
     }
 }

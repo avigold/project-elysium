@@ -3,19 +3,22 @@ import SwiftUI
 struct ArtBadgeView: View {
     let artKey: String
 
-    var body: some View {
-        ZStack {
-            let shape = RoundedRectangle(cornerRadius: 6, style: .continuous)
+    private var resolvedKey: String {
+        artKey.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
 
+    var body: some View {
+        let shape = RoundedRectangle(cornerRadius: 6, style: .continuous)
+
+        ZStack {
             shape
                 .fill(backgroundFill)
                 .overlay(
                     shape.strokeBorder(.primary.opacity(0.15), lineWidth: 1)
                 )
 
-            // If an asset with this name exists, show it. Otherwise show the old badge.
-            if NSImage(named: artKey) != nil {
-                Image(artKey)
+            if NSImage(named: resolvedKey) != nil {
+                Image(resolvedKey)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 44, height: 44)
@@ -33,55 +36,33 @@ struct ArtBadgeView: View {
             }
         }
         .frame(width: 44, height: 44)
-        .accessibilityLabel(Text("Card art \(artKey)"))
+        .accessibilityLabel(Text("Card art \(resolvedKey)"))
     }
 
     private var shortLabel: String {
-        let trimmed = artKey.trimmingCharacters(in: .whitespacesAndNewlines)
-        if trimmed.isEmpty { return "Art" }
-        return String(trimmed.prefix(4)).uppercased()
+        if resolvedKey.isEmpty { return "ART" }
+        return String(resolvedKey.prefix(4)).uppercased()
     }
 
     private var symbolName: String {
-        switch artKey.lowercased() {
-        case "athena": return "shield.lefthalf.filled"
-        case "ares": return "flame"
-        case "apollo": return "sun.max"
-        case "poseidon": return "drop"
-        case "hades": return "moon.stars"
-        case "hermes": return "wind"
-        case "zeus": return "bolt"
+        switch resolvedKey {
+        case "laurel": return "leaf"
+        case "column": return "building.columns"
+        case "mask": return "theatermasks"
+        case "owl": return "bird"
+        case "helm": return "shield.lefthalf.filled"
         default: return "photo"
         }
     }
 
     private var backgroundFill: some ShapeStyle {
-        switch artKey.lowercased() {
-        case "athena": return AnyShapeStyle(.blue.opacity(0.20))
-        case "ares": return AnyShapeStyle(.red.opacity(0.20))
-        case "apollo": return AnyShapeStyle(.yellow.opacity(0.20))
-        case "poseidon": return AnyShapeStyle(.cyan.opacity(0.20))
-        case "hades": return AnyShapeStyle(.purple.opacity(0.20))
-        case "hermes": return AnyShapeStyle(.mint.opacity(0.20))
-        case "zeus": return AnyShapeStyle(.orange.opacity(0.20))
+        switch resolvedKey {
+        case "laurel": return AnyShapeStyle(Color.elysiumPaper.opacity(0.22))
+        case "column": return AnyShapeStyle(Color.elysiumPaper.opacity(0.20))
+        case "mask": return AnyShapeStyle(Color.elysiumPaper.opacity(0.18))
+        case "owl": return AnyShapeStyle(Color.elysiumPaper.opacity(0.20))
+        case "helm": return AnyShapeStyle(Color.elysiumPaper.opacity(0.19))
         default: return AnyShapeStyle(.secondary.opacity(0.15))
         }
-    }
-}
-
-struct ArtBadgeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HStack(spacing: 12) {
-            ArtBadgeView(artKey: "Athena")
-            ArtBadgeView(artKey: "Ares")
-            ArtBadgeView(artKey: "Apollo")
-            ArtBadgeView(artKey: "Poseidon")
-            ArtBadgeView(artKey: "Hades")
-            ArtBadgeView(artKey: "Hermes")
-            ArtBadgeView(artKey: "Zeus")
-            ArtBadgeView(artKey: "Unknown")
-        }
-        .padding()
-        .previewLayout(.sizeThatFits)
     }
 }

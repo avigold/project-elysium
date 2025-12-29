@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6333A6892F00D56000D6F4D2 /* Project_ElysiumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6882F00D56000D6F4D2 /* Project_ElysiumApp.swift */; };
-		6333A68B2F00D56000D6F4D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A68A2F00D56000D6F4D2 /* ContentView.swift */; };
 		6333A68D2F00D56000D6F4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6333A68C2F00D56000D6F4D2 /* Assets.xcassets */; };
 		6333A6902F00D56000D6F4D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6333A68F2F00D56000D6F4D2 /* Preview Assets.xcassets */; };
 		6333A69B2F00D56000D6F4D2 /* Project_ElysiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A69A2F00D56000D6F4D2 /* Project_ElysiumTests.swift */; };
 		6333A6A52F00D56000D6F4D2 /* Project_ElysiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6A42F00D56000D6F4D2 /* Project_ElysiumUITests.swift */; };
 		6333A6A72F00D56000D6F4D2 /* Project_ElysiumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6A62F00D56000D6F4D2 /* Project_ElysiumUITestsLaunchTests.swift */; };
-		6333A6BD2F00D8AF00D6F4D2 /* CardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6BC2F00D8AF00D6F4D2 /* CardID.swift */; };
 		6333A6BF2F00D8C300D6F4D2 /* EnergyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6BE2F00D8C300D6F4D2 /* EnergyType.swift */; };
 		6333A6C12F00D8E400D6F4D2 /* GoalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6C02F00D8E400D6F4D2 /* GoalCard.swift */; };
 		6333A6C32F00D92D00D6F4D2 /* EnergyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6C22F00D92D00D6F4D2 /* EnergyCard.swift */; };
@@ -25,7 +23,6 @@
 		6333A6CE2F00D98F00D6F4D2 /* JSONStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6CD2F00D98F00D6F4D2 /* JSONStore.swift */; };
 		6333A6D02F00D9BE00D6F4D2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6CF2F00D9BE00D6F4D2 /* RootView.swift */; };
 		6333A6D22F00D9D500D6F4D2 /* DeckBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6D12F00D9D500D6F4D2 /* DeckBuilderView.swift */; };
-		6333A6D42F00D9E400D6F4D2 /* GamePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6D32F00D9E400D6F4D2 /* GamePlayView.swift */; };
 		6333A6D62F017D0B00D6F4D2 /* EnergyCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6D52F017D0B00D6F4D2 /* EnergyCost.swift */; };
 		6333A6D82F017D8300D6F4D2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6D72F017D8300D6F4D2 /* GameState.swift */; };
 		6333A6DA2F017D9D00D6F4D2 /* SaveStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6D92F017D9D00D6F4D2 /* SaveStore.swift */; };
@@ -39,6 +36,18 @@
 		6333A6EF2F0181D500D6F4D2 /* DeckCardEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6EE2F0181D500D6F4D2 /* DeckCardEditorView.swift */; };
 		6333A6F32F01981B00D6F4D2 /* ContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6F22F01981B00D6F4D2 /* ContentUnavailableView.swift */; };
 		6333A6F52F02309800D6F4D2 /* CardPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6F42F02309800D6F4D2 /* CardPreviewView.swift */; };
+		6333A6F82F029EEF00D6F4D2 /* ElysiumSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6F72F029EEF00D6F4D2 /* ElysiumSurface.swift */; };
+		6333A6FA2F02AA1000D6F4D2 /* ElysiumSlabBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6F92F02AA1000D6F4D2 /* ElysiumSlabBackground.swift */; };
+		6333A6FC2F02AC9C00D6F4D2 /* ElysiumSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333A6FB2F02AC9C00D6F4D2 /* ElysiumSection.swift */; };
+		63B385662F02DCD30086CE8F /* EnergyPillStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B385652F02DCD30086CE8F /* EnergyPillStepper.swift */; };
+		63B385682F02F3FE0086CE8F /* GoalDragPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B385672F02F3FE0086CE8F /* GoalDragPayload.swift */; };
+		63B3856A2F02F4400086CE8F /* EnergyPermanentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B385692F02F4400086CE8F /* EnergyPermanentView.swift */; };
+		63B3856C2F02F4AE0086CE8F /* ScaledCardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3856B2F02F4AE0086CE8F /* ScaledCardPreview.swift */; };
+		63B3856E2F02F4C60086CE8F /* HandCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3856D2F02F4C60086CE8F /* HandCardView.swift */; };
+		63B385702F02F4D90086CE8F /* BattlefieldCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3856F2F02F4D90086CE8F /* BattlefieldCardView.swift */; };
+		63B385722F02F51B0086CE8F /* BoundBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B385712F02F51B0086CE8F /* BoundBadge.swift */; };
+		63B385742F02F83F0086CE8F /* EnergyCardPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B385732F02F83F0086CE8F /* EnergyCardPreviewView.swift */; };
+		63B385762F02F8740086CE8F /* ScaledEnergyCardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B385752F02F8740086CE8F /* ScaledEnergyCardPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +70,6 @@
 /* Begin PBXFileReference section */
 		6333A6852F00D56000D6F4D2 /* Project Elysium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Elysium.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6333A6882F00D56000D6F4D2 /* Project_ElysiumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_ElysiumApp.swift; sourceTree = "<group>"; };
-		6333A68A2F00D56000D6F4D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6333A68C2F00D56000D6F4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6333A68F2F00D56000D6F4D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6333A6912F00D56000D6F4D2 /* Project_Elysium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project_Elysium.entitlements; sourceTree = "<group>"; };
@@ -70,7 +78,6 @@
 		6333A6A02F00D56000D6F4D2 /* Project ElysiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project ElysiumUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6333A6A42F00D56000D6F4D2 /* Project_ElysiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_ElysiumUITests.swift; sourceTree = "<group>"; };
 		6333A6A62F00D56000D6F4D2 /* Project_ElysiumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_ElysiumUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6333A6BC2F00D8AF00D6F4D2 /* CardID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardID.swift; sourceTree = "<group>"; };
 		6333A6BE2F00D8C300D6F4D2 /* EnergyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyType.swift; sourceTree = "<group>"; };
 		6333A6C02F00D8E400D6F4D2 /* GoalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCard.swift; sourceTree = "<group>"; };
 		6333A6C22F00D92D00D6F4D2 /* EnergyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCard.swift; sourceTree = "<group>"; };
@@ -81,7 +88,6 @@
 		6333A6CD2F00D98F00D6F4D2 /* JSONStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStore.swift; sourceTree = "<group>"; };
 		6333A6CF2F00D9BE00D6F4D2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		6333A6D12F00D9D500D6F4D2 /* DeckBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBuilderView.swift; sourceTree = "<group>"; };
-		6333A6D32F00D9E400D6F4D2 /* GamePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayView.swift; sourceTree = "<group>"; };
 		6333A6D52F017D0B00D6F4D2 /* EnergyCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCost.swift; sourceTree = "<group>"; };
 		6333A6D72F017D8300D6F4D2 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		6333A6D92F017D9D00D6F4D2 /* SaveStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveStore.swift; sourceTree = "<group>"; };
@@ -95,6 +101,18 @@
 		6333A6EE2F0181D500D6F4D2 /* DeckCardEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardEditorView.swift; sourceTree = "<group>"; };
 		6333A6F22F01981B00D6F4D2 /* ContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableView.swift; sourceTree = "<group>"; };
 		6333A6F42F02309800D6F4D2 /* CardPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreviewView.swift; sourceTree = "<group>"; };
+		6333A6F72F029EEF00D6F4D2 /* ElysiumSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElysiumSurface.swift; sourceTree = "<group>"; };
+		6333A6F92F02AA1000D6F4D2 /* ElysiumSlabBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElysiumSlabBackground.swift; sourceTree = "<group>"; };
+		6333A6FB2F02AC9C00D6F4D2 /* ElysiumSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElysiumSection.swift; sourceTree = "<group>"; };
+		63B385652F02DCD30086CE8F /* EnergyPillStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyPillStepper.swift; sourceTree = "<group>"; };
+		63B385672F02F3FE0086CE8F /* GoalDragPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDragPayload.swift; sourceTree = "<group>"; };
+		63B385692F02F4400086CE8F /* EnergyPermanentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyPermanentView.swift; sourceTree = "<group>"; };
+		63B3856B2F02F4AE0086CE8F /* ScaledCardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledCardPreview.swift; sourceTree = "<group>"; };
+		63B3856D2F02F4C60086CE8F /* HandCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCardView.swift; sourceTree = "<group>"; };
+		63B3856F2F02F4D90086CE8F /* BattlefieldCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlefieldCardView.swift; sourceTree = "<group>"; };
+		63B385712F02F51B0086CE8F /* BoundBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundBadge.swift; sourceTree = "<group>"; };
+		63B385732F02F83F0086CE8F /* EnergyCardPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCardPreviewView.swift; sourceTree = "<group>"; };
+		63B385752F02F8740086CE8F /* ScaledEnergyCardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledEnergyCardPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +163,7 @@
 		6333A6872F00D56000D6F4D2 /* Project Elysium */ = {
 			isa = PBXGroup;
 			children = (
+				6333A6F62F029EE400D6F4D2 /* UI */,
 				6333A6DF2F017E3700D6F4D2 /* DragDrop */,
 				6333A6DE2F017E2D00D6F4D2 /* ViewModels */,
 				6333A6DD2F017DF300D6F4D2 /* Persistence */,
@@ -153,7 +172,6 @@
 				6333A6B82F00D5DE00D6F4D2 /* Models */,
 				6333A6B72F00D5D700D6F4D2 /* Views */,
 				6333A6882F00D56000D6F4D2 /* Project_ElysiumApp.swift */,
-				6333A68A2F00D56000D6F4D2 /* ContentView.swift */,
 				6333A68C2F00D56000D6F4D2 /* Assets.xcassets */,
 				6333A6912F00D56000D6F4D2 /* Project_Elysium.entitlements */,
 				6333A68E2F00D56000D6F4D2 /* Preview Content */,
@@ -191,7 +209,6 @@
 			children = (
 				6333A6CF2F00D9BE00D6F4D2 /* RootView.swift */,
 				6333A6D12F00D9D500D6F4D2 /* DeckBuilderView.swift */,
-				6333A6D32F00D9E400D6F4D2 /* GamePlayView.swift */,
 				6333A6E22F017EA600D6F4D2 /* MenuView.swift */,
 				6333A6E42F017F4D00D6F4D2 /* BattlefieldView.swift */,
 				6333A6EA2F01817F00D6F4D2 /* DeckListRowView.swift */,
@@ -199,6 +216,12 @@
 				6333A6EE2F0181D500D6F4D2 /* DeckCardEditorView.swift */,
 				6333A6F22F01981B00D6F4D2 /* ContentUnavailableView.swift */,
 				6333A6F42F02309800D6F4D2 /* CardPreviewView.swift */,
+				63B385692F02F4400086CE8F /* EnergyPermanentView.swift */,
+				63B3856B2F02F4AE0086CE8F /* ScaledCardPreview.swift */,
+				63B3856D2F02F4C60086CE8F /* HandCardView.swift */,
+				63B3856F2F02F4D90086CE8F /* BattlefieldCardView.swift */,
+				63B385732F02F83F0086CE8F /* EnergyCardPreviewView.swift */,
+				63B385752F02F8740086CE8F /* ScaledEnergyCardPreview.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,7 +229,6 @@
 		6333A6B82F00D5DE00D6F4D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6333A6BC2F00D8AF00D6F4D2 /* CardID.swift */,
 				6333A6BE2F00D8C300D6F4D2 /* EnergyType.swift */,
 				6333A6C02F00D8E400D6F4D2 /* GoalCard.swift */,
 				6333A6C22F00D92D00D6F4D2 /* EnergyCard.swift */,
@@ -222,6 +244,7 @@
 		6333A6B92F00D5E600D6F4D2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				63B385672F02F3FE0086CE8F /* GoalDragPayload.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -258,6 +281,18 @@
 				6333A6E02F017E6E00D6F4D2 /* DragPayload.swift */,
 			);
 			path = DragDrop;
+			sourceTree = "<group>";
+		};
+		6333A6F62F029EE400D6F4D2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6333A6F72F029EEF00D6F4D2 /* ElysiumSurface.swift */,
+				6333A6F92F02AA1000D6F4D2 /* ElysiumSlabBackground.swift */,
+				6333A6FB2F02AC9C00D6F4D2 /* ElysiumSection.swift */,
+				63B385652F02DCD30086CE8F /* EnergyPillStepper.swift */,
+				63B385712F02F51B0086CE8F /* BoundBadge.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,33 +425,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B385682F02F3FE0086CE8F /* GoalDragPayload.swift in Sources */,
 				6333A6E92F01812D00D6F4D2 /* DeckStoreModel.swift in Sources */,
 				6333A6E12F017E6E00D6F4D2 /* DragPayload.swift in Sources */,
 				6333A6EF2F0181D500D6F4D2 /* DeckCardEditorView.swift in Sources */,
 				6333A6DC2F017DCB00D6F4D2 /* GameViewModel.swift in Sources */,
 				6333A6CE2F00D98F00D6F4D2 /* JSONStore.swift in Sources */,
-				6333A6BD2F00D8AF00D6F4D2 /* CardID.swift in Sources */,
 				6333A6CC2F00D98200D6F4D2 /* AppState.swift in Sources */,
 				6333A6E32F017EA600D6F4D2 /* MenuView.swift in Sources */,
 				6333A6CA2F00D96F00D6F4D2 /* GameStore.swift in Sources */,
 				6333A6C32F00D92D00D6F4D2 /* EnergyCard.swift in Sources */,
 				6333A6E52F017F4D00D6F4D2 /* BattlefieldView.swift in Sources */,
+				63B385742F02F83F0086CE8F /* EnergyCardPreviewView.swift in Sources */,
+				63B385702F02F4D90086CE8F /* BattlefieldCardView.swift in Sources */,
+				63B385722F02F51B0086CE8F /* BoundBadge.swift in Sources */,
 				6333A6D82F017D8300D6F4D2 /* GameState.swift in Sources */,
+				6333A6F82F029EEF00D6F4D2 /* ElysiumSurface.swift in Sources */,
 				6333A6C62F00D94300D6F4D2 /* Zone.swift in Sources */,
-				6333A68B2F00D56000D6F4D2 /* ContentView.swift in Sources */,
 				6333A6892F00D56000D6F4D2 /* Project_ElysiumApp.swift in Sources */,
 				6333A6DA2F017D9D00D6F4D2 /* SaveStore.swift in Sources */,
 				6333A6D02F00D9BE00D6F4D2 /* RootView.swift in Sources */,
+				6333A6FC2F02AC9C00D6F4D2 /* ElysiumSection.swift in Sources */,
 				6333A6C12F00D8E400D6F4D2 /* GoalCard.swift in Sources */,
 				6333A6D62F017D0B00D6F4D2 /* EnergyCost.swift in Sources */,
 				6333A6F32F01981B00D6F4D2 /* ContentUnavailableView.swift in Sources */,
 				6333A6ED2F0181AE00D6F4D2 /* ArtBadgeView.swift in Sources */,
-				6333A6D42F00D9E400D6F4D2 /* GamePlayView.swift in Sources */,
+				6333A6FA2F02AA1000D6F4D2 /* ElysiumSlabBackground.swift in Sources */,
+				63B3856A2F02F4400086CE8F /* EnergyPermanentView.swift in Sources */,
 				6333A6C82F00D95500D6F4D2 /* PlacedCard.swift in Sources */,
 				6333A6D22F00D9D500D6F4D2 /* DeckBuilderView.swift in Sources */,
 				6333A6BF2F00D8C300D6F4D2 /* EnergyType.swift in Sources */,
+				63B385762F02F8740086CE8F /* ScaledEnergyCardPreview.swift in Sources */,
 				6333A6EB2F01817F00D6F4D2 /* DeckListRowView.swift in Sources */,
+				63B3856C2F02F4AE0086CE8F /* ScaledCardPreview.swift in Sources */,
+				63B3856E2F02F4C60086CE8F /* HandCardView.swift in Sources */,
 				6333A6F52F02309800D6F4D2 /* CardPreviewView.swift in Sources */,
+				63B385662F02DCD30086CE8F /* EnergyPillStepper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
